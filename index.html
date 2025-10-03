@@ -1,52 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
-  <meta charset="UTF-1  0">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Famiglia GPT</title>
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <!-- Apple Touch Icon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-
+  <meta name="description" content="Famiglia GPT — Meno caos, più tempo insieme. Idee pratiche per usare l’AI in casa in 30 secondi al giorno.">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #fdfdfb;
-      color: #1f2d3d;
-      text-align: center;
-      padding: 40px 20px;
+    :root{
+      --bg:        #F6F1E8;   /* crema/sabbia */
+      --ink:       #22303A;   /* testo principale */
+      --muted:     #5E6B75;   /* testo secondario */
+      --brand:     #E07A5F;   /* corallo calmo */
+      --brand-hov: #C9654B;
+      --btn-txt:   #ffffff;
+      --btn-sec-bg:#ffffff;
+      --btn-sec-bd:#E6E0D6;
+      --btn-sec-tx:#2E4857;   /* azzurro smorzato */
+      --card:      #FFFFFFE6; /* card traslucida */
     }
-    img { max-width: 180px; margin-bottom: 20px; }
-    h1 { font-size: 1.8rem; margin-bottom: 10px; }
-    p  { font-size: 1rem; margin-bottom: 30px; }
+
+    *{ box-sizing:border-box }
+    html, body {
+      height:100%;
+      margin:0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, "Helvetica Neue", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+    }
+
+    .wrap {
+      min-height: 100dvh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding: 56px 20px;
+    }
+
+    .card {
+      width:100%;
+      max-width:720px;
+      background: var(--card);
+      border-radius: 16px;
+      padding: 28px 22px 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.08);
+      text-align:center;
+    }
+
+    .logo {
+      width: 140px;
+      height:auto;
+      display:block;
+      margin: 0 auto 14px;
+    }
+
+    h1 {
+      margin: 8px 0 6px;
+      font-size: clamp(1.7rem, 3.8vw, 2.2rem);
+      letter-spacing: .2px;
+    }
+
+    .lead {
+      margin: 6px auto 22px;
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.55;
+      max-width: 48ch;
+    }
+
+    .buttons {
+      display:flex; flex-wrap:wrap; gap:12px;
+      align-items:center; justify-content:center;
+      margin-bottom: 10px;
+    }
+
     .button {
-      display: inline-block; margin: 10px; padding: 12px 24px;
-      background-color: #ff6b5c; color: #fff; font-weight: 700;
-      text-decoration: none; border-radius: 6px; transition: .3s;
+      appearance:none; border:0; cursor:pointer;
+      text-decoration:none; font-weight:700;
+      padding: 12px 18px; border-radius: 10px;
+      transition: background .2s ease, transform .06s ease, box-shadow .2s ease;
     }
-    .button:hover { background-color: #e95c4e; }
-    footer { margin-top: 40px; font-size: .8rem; color: #666; }
+    .button.primary {
+      background: var(--brand); color: var(--btn-txt);
+      box-shadow: 0 6px 16px rgba(224,122,95,.25);
+    }
+    .button.primary:hover, .button.primary:focus {
+      background: var(--brand-hov); transform: translateY(-1px);
+      box-shadow: 0 8px 20px rgba(201,101,75,.28);
+    }
+    .button.secondary {
+      background: var(--btn-sec-bg); color: var(--btn-sec-tx);
+      border: 1px solid var(--btn-sec-bd);
+    }
+    .button.secondary:hover { background: #F9F6F0; }
+
+    footer {
+      margin-top: 14px; font-size: .85rem; color: #6b7785;
+    }
+
+    @media (max-width:420px){
+      .button{ padding: 11px 14px }
+    }
   </style>
 </head>
 <body>
-  <img src="logo.png" alt="Famiglia GPT Logo">
-  <h1>Famiglia GPT</h1>
-  <p>Less chaos, more time together.<br>
-     Discover how AI can simplify your family life in 30 seconds a day.</p>
+  <main class="wrap">
+    <section class="card">
+      <!-- Logo (transparent background) -->
+      <img src="logo.png" alt="Logo Famiglia GPT" class="logo">
 
-  <!-- Social Links -->
-  <a href="https://www.instagram.com/famigliagpt/" class="button">Instagram</a>
-  <a href="https://www.tiktok.com/@famiglia_gpt" class="button">TikTok</a>
-  <a href="https://youtube.com/@famigliagpt?si=6vHy5XCESQAv8B1O" class="button">YouTube</a>
-  <a href="https://t.me/famigliagpt" class="button">Telegram</a>
+      <h1>Famiglia GPT</h1>
+      <p class="lead">
+        Meno caos, più tempo insieme.<br>
+        In 30 secondi al giorno ti mostriamo come usare l’AI a casa:
+        pasti, compiti, organizzazione e risparmio — con strumenti sicuri per tutta la famiglia.
+      </p>
 
-  <!-- Download Prompt -->
-  <a href="https://drive.google.com/drive/folders/1LQACdxgqV6Fr_S4NUgDFwE6u7VEnSkug?usp=sharing" class="button">Download Free Prompts</a>
+      <div class="buttons">
+        <a class="button primary" href="https://www.instagram.com/famigliagpt/">Instagram</a>
+        <a class="button primary" href="https://www.tiktok.com/@famiglia_gpt">TikTok</a>
+        <a class="button primary" href="https://youtube.com/@famigliagpt">YouTube</a>
+        <a class="button primary" href="https://t.me/famigliagpt">Telegram</a>
+        <a class="button secondary" href="https://drive.google.com/drive/folders/1LQACdxgqV6Fr_S4NUgDFwE6u7VEnSkug?usp=sharing">Scarica i Prompt Gratuiti</a>
+      </div>
 
-  <footer>
-    © 2025 Famiglia GPT — Created with AI, not affiliated with OpenAI
-  </footer>
+      <footer>© 2025 Famiglia GPT — Creato con AI, non affiliato a OpenAI</footer>
+    </section>
+  </main>
 </body>
 </html>
